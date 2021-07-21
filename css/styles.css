@@ -61,6 +61,12 @@
 .container-itens{
     display: flex;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container-itens::-webkit-scrollbar{
+    display: none;
 }
 
 .item{
@@ -130,8 +136,9 @@ button{
     color: #FFFFFF;
     border:none;
     padding: 0 55px;
-    vertical-align: middle;
+    text-align: center;
 }
+
 
 
 
