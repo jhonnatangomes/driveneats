@@ -45,7 +45,7 @@
 
 .corpo{
     background-color: #E5E5E5;
-    margin-top: 92px;
+    margin: 92px 0;
     height: calc(100% - 92px);
     padding-left: 19px;
 }
@@ -106,3 +106,32 @@
 .sobremesas{
     padding-bottom: 16px;
 }
+
+.pedido{
+    width: 100%;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button{
+    width: 88%;
+    height: 61px;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    color: #FFFFFF;
+    border:none;
+    padding: 0 55px;
+    vertical-align: middle;
+}
+
+
+
