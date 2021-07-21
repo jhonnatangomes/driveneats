@@ -14,20 +14,6 @@
 }
 /* Fontes */
 
-/* Font-weights */
-weight-300{
-    font-weight: 300;
-}
-
-weight-400{
-    font-weight: 400;
-}
-
-weight-700{
-    font-weight: 700;
-}
-/* Font-weights */
-
 .topo{
     background-color: #CF2B2B;
     height: 92px;
@@ -53,7 +39,64 @@ weight-700{
 }
 
 .container-topo p:last-child{
+    font-weight: 400;
     font-size: 18px;
 }
 
+.corpo{
+    background-color: #E5E5E5;
+    margin-top: 92px;
+    height: calc(100vh - 92px);
+    padding-left: 19px;
+}
+
+
+.pratos{
+    padding-top: 31px;
+}
+
+.categoria{
+    font-size: 26px;
+}
+
+.container-pratos{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.prato{
+    width: 172px;
+    height: 216px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    margin-top: 17px;
+    margin-right: 16px;
+    padding: 18px 14px 13px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prato img{
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+}
+
+.nome-prato{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.descricao-prato{
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+
+.preco{
+    font-weight: 400;
+    font-size: 16px;
+}
 
