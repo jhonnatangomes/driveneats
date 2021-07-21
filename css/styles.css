@@ -46,10 +46,9 @@
 .corpo{
     background-color: #E5E5E5;
     margin-top: 92px;
-    height: calc(100vh - 92px);
+    height: calc(100% - 92px);
     padding-left: 19px;
 }
-
 
 .pratos{
     padding-top: 31px;
@@ -59,12 +58,12 @@
     font-size: 26px;
 }
 
-.container-pratos{
+.container-itens{
     display: flex;
     overflow-x: scroll;
 }
 
-.prato{
+.item{
     width: 172px;
     height: 216px;
     background-color: #FFFFFF;
@@ -78,18 +77,18 @@
     justify-content: space-between;
 }
 
-.prato img{
+.item img{
     width: 144px;
     height: 87px;
     border-radius: 4px;
 }
 
-.nome-prato{
+.nome-item{
     font-weight: 700;
     font-size: 16px;
 }
 
-.descricao-prato{
+.descricao-item{
     font-weight: 300;
     font-size: 15px;
     color: #A6A6A6;
@@ -100,3 +99,10 @@
     font-size: 16px;
 }
 
+.bebidas, .sobremesas{
+    margin-top: 27px;
+}
+
+.sobremesas{
+    padding-bottom: 16px;
+}
