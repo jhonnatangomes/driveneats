@@ -47,7 +47,6 @@
     background-color: #E5E5E5;
     margin: 92px 0;
     height: calc(100% - 92px);
-    padding-left: 19px;
 }
 
 .pratos{
@@ -56,6 +55,7 @@
 
 .categoria{
     font-size: 26px;
+    padding-left: 19px;
 }
 
 .container-itens{
@@ -63,6 +63,7 @@
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-left: 19px;
 }
 
 .container-itens::-webkit-scrollbar{
@@ -81,6 +82,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .item img{
