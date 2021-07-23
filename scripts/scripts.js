@@ -35,15 +35,12 @@ function select(element){
         else if(element.classList.contains("sobremesa")){
             for(let i = 0; i < item_por_categoria; i++){
                 sobremesa[i].classList.remove("selecionado");
-                bebida[i].querySelector("ion-icon").classList.remove("display");
+                sobremesa[i].querySelector("ion-icon").classList.remove("display");
             }
         }
 
         element.classList.add("selecionado");
         element.querySelector("ion-icon").classList.add("display");
     }
-
-    
-
     
 }
