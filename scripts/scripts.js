@@ -92,7 +92,7 @@ function fecharpedido(){
     let total = prato_preco + bebida_preco + sobremesa_preco;
     total = total.toFixed(2);
     let pedido = document.querySelector(".pedido");
-    let link = "https://wa.me/5517996674646?text=";
+    let link = "https://wa.me/5517997372284?text=";
     let pedido_wpp = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato_nome} \n- Bebida: ${bebida_nome} \n- Sobremesa: ${sobremesa_nome} \nTotal: R$ ${total}`;
     link += encodeURIComponent(pedido_wpp);
 
