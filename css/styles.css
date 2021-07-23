@@ -22,6 +22,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .container-topo{
@@ -83,6 +84,21 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    position: relative;
+}
+
+.item ion-icon{
+    position: absolute;
+    right: 11px;
+    bottom: 11px;
+    font-size: 19px;
+    background-color: #32B72F;
+    color: white;
+    border-radius: 50%;
+}
+
+ion-icon{
+    display: none;
 }
 
 .item img{
@@ -145,4 +161,6 @@ button{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 
-
+.display{
+    display: initial;
+}
