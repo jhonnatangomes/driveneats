@@ -90,6 +90,7 @@ function fecharpedido(){
     else{
         botao.style.backgroundColor = "#CBCBCB";
         botao.innerHTML = "Selecione os 3 itens para fechar o pedido";
+        botao.removeAttribute("onclick");
     }
 
 }
