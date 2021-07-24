@@ -35,7 +35,7 @@
 
             <div class="container-itens">
 
-                <div class="item roboto prato">
+                <div class="item roboto prato" onclick="selecionar_prato(this);">
                     <img src="imagens/prato.jpeg" alt="Um pouco de batata, um pouco de salada">
                     <p class="nome-item">Frango Yin Yang</p>
                     <p class="descricao-item">Um pouco de batata, um pouco de salada</p>
@@ -43,7 +43,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
     
-                <div class="item roboto prato">
+                <div class="item roboto prato" onclick="selecionar_prato(this);">
                     <img src="imagens/strogonoff-de-frango.jpg" alt="strogonoff de frango com batata palha e arroz">
                     <p class="nome-item">Strogonoff de Frango</p>
                     <p class="descricao-item">Strogonoff de frango com batata palha e arroz</p>
@@ -51,7 +51,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="item roboto prato">
+                <div class="item roboto prato" onclick="selecionar_prato(this);">
                     <img src="imagens/churrasco.jpg" alt="Churrasco, arroz e mais alguma coisa">
                     <p class="nome-item">Churrasco</p>
                     <p class="descricao-item">Churrasco, arroz e mais alguma coisa</p>
@@ -72,7 +72,7 @@
 
             <div class="container-itens">
 
-                <div class="item roboto bebida">
+                <div class="item roboto bebida" onclick="selecionar_bebida(this)">
                     <img src="imagens/coca.jpg" alt="Coquinha gelada">
                     <p class="nome-item">Coquinha gelada</p>
                     <p class="descricao-item">Lata 350ml</p>
@@ -80,7 +80,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="item roboto bebida">
+                <div class="item roboto bebida" onclick="selecionar_bebida(this)">
                     <img src="imagens/guarana-jesus.jpg" alt="Refrigerante de qualidade do Maranhão">
                     <p class="nome-item">Guaraná Jesus</p>
                     <p class="descricao-item">Refrigerante de qualidade do Maranhão</p>
@@ -88,7 +88,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="item roboto bebida">
+                <div class="item roboto bebida" onclick="selecionar_bebida(this)">
                     <img src="imagens/agua-de-coco.jpg" alt="Água de coco natural e gelada">
                     <p class="nome-item">Água de coco</p>
                     <p class="descricao-item">Água de coco natural e gelada</p>
@@ -108,7 +108,7 @@
 
             <div class="container-itens">
 
-                <div class="item roboto sobremesa">
+                <div class="item roboto sobremesa" onclick="selecionar_sobremesa(this)">
                     <img src="imagens/pudim.jpg" alt="pudim de leite">
                     <p class="nome-item">Pudim</p>
                     <p class="descricao-item">Apenas pudim</p>
@@ -116,7 +116,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="item roboto sobremesa">
+                <div class="item roboto sobremesa" onclick="selecionar_sobremesa(this)">
                     <img src="imagens/sorvete.jpg" alt="Sorvete de iogurte grego">
                     <p class="nome-item">Sorvete</p>
                     <p class="descricao-item">Iogurte grego, o melhor sabor de todos</p>
@@ -124,7 +124,7 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div class="item roboto sobremesa">
+                <div class="item roboto sobremesa" onclick="selecionar_sobremesa(this)">
                     <img src="imagens/petit-gateau.jpg" alt="Bolo com sorvete">
                     <p class="nome-item">petit-gateau</p>
                     <p class="descricao-item">Bolo com sorvete</p>
@@ -150,6 +150,36 @@
 
     </div>
     <!-- BARRA DE PEDIDO -->
+
+    <!-- Prompt de confirmação de pedido -->
+    <div class="confirmacao-pedido roboto">
+        <div class="container-confirmacao-pedido">
+            <p class="confirmacao-titulo">Confirme seu pedido</p>
+            <div class="confirmacao-itens">
+                <div class="confirmacao-item">
+                    <p class="item-individual"></p>
+                    <p class="item-individual"></p>
+                </div>
+                <div class="confirmacao-item">
+                    <p class="item-individual"></p>
+                    <p class="item-individual"></p>
+                </div>
+                <div class="confirmacao-item">
+                    <p class="item-individual"></p>
+                    <p class="item-individual"></p>
+                </div>
+                <div class="confirmacao-item">
+                    <p>Total</p>
+                    <p class="total"></p>
+                </div>
+            </div>
+            <div class="confirmacao-botoes">
+                <a><button class="tudo-certo">Tudo certo, pode pedir!</button></a>
+                <button class="cancelar" onclick="fechar_confirmacao();">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Prompt de confirmação de pedido -->
 
     <script src="scripts/scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
