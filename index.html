@@ -151,9 +151,10 @@
     </div>
     <!-- BARRA DE PEDIDO -->
 
-    <!-- Prompt de confirmação de pedido -->
+    <!-- PROMPT DE CONFIRMAÇÃO DE PEDIDO -->
     <div class="confirmacao-pedido roboto">
-        <div class="container-confirmacao-pedido">
+        <!-- CONFIRMAÇÂO PEDIDO -->
+        <div class="container-confirmacao" id="confirmacao-pedido">
             <p class="confirmacao-titulo">Confirme seu pedido</p>
             <div class="confirmacao-itens">
                 <div class="confirmacao-item">
@@ -178,8 +179,30 @@
                 <button class="cancelar" onclick="fechar_confirmacao();">Cancelar</button>
             </div>
         </div>
+        <!-- CONFIRMAÇÂO PEDIDO -->
+
+        <div class="container-confirmacao" id="confirmacao-dados">
+            <div class="dados-titulo">
+                <p>Confirme seus dados</p>
+            </div>
+            <div class="nome">
+                <p>Nome</p>
+                <input type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="endereco">
+                <p>Endereço</p>
+                <input type="text" placeholder="Digite seu endereço...">
+            </div>
+            <div class="confirmacao-botoes">
+                <button class="confirmar" onclick="confirmar_dados();">Confirmar</button>
+                <button class="cancelar" onclick="fechar_confirmacao();">Cancelar</button>
+            </div>
+            
+        </div>
+
+
     </div>
-    <!-- Prompt de confirmação de pedido -->
+    <!-- PROMPT DE CONFIRMAÇÃO DE PEDIDO -->
 
     <script src="scripts/scripts.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

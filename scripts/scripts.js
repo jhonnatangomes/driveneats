@@ -1,6 +1,8 @@
 let prato_preco, bebida_preco, sobremesa_preco;
 let prato_nome, bebida_nome, sobremesa_nome;
 let itens_escolhidos = 0;
+let nome, endereco;
+let link;
 
 function selecionar_prato(elemento){
     const prato_s = document.querySelector(".container-itens .prato.selecionado");
@@ -76,16 +78,12 @@ function converterpreco(preco){
 }
 
 function fecharpedido(){
-    const tudo_certo = document.querySelector(".confirmacao-botoes a");
     const botao = document.querySelector("button");
 
     if(itens_escolhidos === 3){
-        let link = criarlink();
-        
-        tudo_certo.setAttribute("href", link);
         botao.style.backgroundColor = "#32B72F";
         botao.innerHTML = "Fechar pedido";
-        botao.setAttribute("onclick", "confirmar();")
+        botao.setAttribute("onclick", "prompt_dados();")
     }
     else{
         botao.style.backgroundColor = "#CBCBCB";
@@ -95,21 +93,44 @@ function fecharpedido(){
 
 }
 
-function criarlink(){
-
-    let total = prato_preco + bebida_preco + sobremesa_preco;
-    total = total.toFixed(2);
-    let link = "https://wa.me/5517997372284?text=";
-    let pedido_wpp = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato_nome} \n- Bebida: ${bebida_nome} \n- Sobremesa: ${sobremesa_nome} \nTotal: R$ ${total}`;
-    link += encodeURIComponent(pedido_wpp);
-
-    return link;
+function prompt_dados(){
+    ligar_blur();
+    const confirmacao_dados = document.querySelector("#confirmacao-dados");
+    confirmacao_dados.style.display = "flex";
+    esconder_confirmacao_pedido();
 }
 
-function confirmar(){
-    const confirmacao_pedido = document.querySelector(".confirmacao-pedido");
+function ligar_blur(){
+    const blur = document.querySelector(".confirmacao-pedido");
+    blur.style.display = "flex";
+}
+
+function esconder_prompt_dados(){
+    const confirmacao_dados = document.querySelector("#confirmacao-dados");
+    confirmacao_dados.style.display = "none";
+}
+
+function esconder_confirmacao_pedido(){
+    const confirmacao_pedido = document.querySelector("#confirmacao-pedido");
+    confirmacao_pedido.style.display = "none";
+}
+
+
+function confirmar_dados(){
+    const input = document.querySelector("#confirmacao-dados");
+    nome = input.querySelector(".nome input").value;
+    endereco = input.querySelector(".endereco input").value;
+
+    esconder_prompt_dados();
+    confirmar_pedido();
+}
+
+function confirmar_pedido(){
+    const confirmacao_pedido = document.querySelector("#confirmacao-pedido");
     let total = prato_preco + bebida_preco + sobremesa_preco;
     confirmacao_pedido.style.display = "flex";
+
+    criarlink();
 
     confirmacao_pedido.querySelectorAll(".item-individual")[0].innerHTML = prato_nome;
     confirmacao_pedido.querySelectorAll(".item-individual")[1].innerHTML = prato_preco.toFixed(2);
@@ -124,4 +145,22 @@ function fechar_confirmacao(){
     const confirmacao_pedido = document.querySelector(".confirmacao-pedido");
     confirmacao_pedido.style.display = "none";
 }
+
+
+function criarlink(){
+    const tudo_certo = document.querySelector(".confirmacao-botoes a");
+    let total = prato_preco + bebida_preco + sobremesa_preco;
+    total = total.toFixed(2);
+    link = "https://wa.me/5517997372284?text=";
+    let pedido_wpp = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato_nome} \n- Bebida: ${bebida_nome} \n- Sobremesa: ${sobremesa_nome} \nTotal: R$ ${total} \n\nNome: ${nome} \nEndereço: ${endereco}`;
+    link += encodeURIComponent(pedido_wpp);
+
+    tudo_certo.setAttribute("href", link);
+}
+
+
+
+
+
+
 

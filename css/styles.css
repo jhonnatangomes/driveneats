@@ -181,7 +181,7 @@ button{
     z-index: 100;
 }
 
-.container-confirmacao-pedido{
+.container-confirmacao{
     width: calc(100% - 36px);
     margin-top: calc(50vh - 353px/2);
     height: 353px;
@@ -190,11 +190,12 @@ button{
     border-radius: 9px;   
     font-size: 22px;
     color: #FFFFFF;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     font-weight: 700;
 }
+
 .confirmacao-titulo{
     text-align: center;
     margin-top: 21px;
@@ -242,4 +243,41 @@ button{
     font-weight: 400;
 }
 
+.dados-titulo{
+    margin-top: 21px;
+}
+
+input{
+    width: 80%;
+    margin-top: 10px;
+    border:1px solid grey;
+    border-radius: 3px;
+    height: 25px;
+}
+
+input:focus{
+    outline:none;
+}
+
+.dados-titulo{
+    text-align: center;
+}
+
+.nome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmar{
+    width: 80%;
+    color: #50D074;
+    background-color: #FFFFFF;
+}
 
