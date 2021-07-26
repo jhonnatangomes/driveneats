@@ -96,8 +96,9 @@ function fecharpedido(){
 function prompt_dados(){
     ligar_blur();
     const confirmacao_dados = document.querySelector("#confirmacao-dados");
-    confirmacao_dados.style.display = "flex";
-    esconder_confirmacao_pedido();
+    confirmacao_dados.style.display = "flex"; 
+    esconder_confirmacao_pedido(); //o prompt de confirmação de pedido é escondido para que ele não apareça junto com o prompt de dados ao clicar no botão cancelar do prompt de pedidos.
+
 }
 
 function ligar_blur(){
